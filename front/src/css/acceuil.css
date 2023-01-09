@@ -1,0 +1,16 @@
+.acceuil li {
+    list-style: none;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    border: solid black 2px;
+}
+
+.agenda-info {
+    max-width: 20vw;
+    word-wrap: break-word;
+}
+
+.acceuil ul img {
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+}
