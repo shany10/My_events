@@ -17,16 +17,18 @@ const Acceuil = () => {
     }, [])
 
     return (
-        <section>
+        <section className='acceuil'>
             <h1>coucou</h1>
             <ul>
                 {agendas.map((agenda, index) => {
-                    return <li key={index}>
+                    return <li key={index} className='flex center'>
                         <img src={agenda.image} alt="agenda" />
-                        <h1>
-                            {agenda.title}
-                        </h1>
-                        <p>{agenda.description}</p>
+                        <div className='agenda-info'>
+                            <h1>
+                                {agenda.title}
+                            </h1>
+                            <p>{agenda.description}</p>
+                        </div>
                     </li>
                 })}
             </ul>

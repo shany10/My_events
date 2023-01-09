@@ -1,6 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Test from './page/test';
 import Acceuil from './page/acceuil';
+import "./css/style.css";
+import "./css/acceuil.css"; 
+
 
 function App() {
   return (
