@@ -1,0 +1,73 @@
+.acceuil li {
+    list-style: none;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    border: solid black 2px;
+    width: 40vw;
+}
+
+.agenda-info {
+    width: 50%;
+    word-wrap: break-word;
+    margin-left: 4%;
+}
+
+.acceuil ul {
+    border: solid rgb(167, 0, 0) 2px;
+}
+
+.acceuil ul img {
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    margin-left: 4%;
+    width: 30%;
+    height: 30%;
+    min-width: 30%;
+    min-height: 30%;
+}
+
+.acceuil-menu {
+    width: 20vw;
+    height: 65vh;
+    border: solid blue 2px;
+}
+
+.acceuil-menu input {
+    border-color: aqua;
+    height: 4vh;
+    border-radius: 5px;
+    font-size: 2.2vh;
+    width: 85%;
+}
+
+.acceuil-menu select {
+    height: 4vh;
+    width: 85%; 
+    border: solid 2px aqua;
+    border-radius: 5px;
+    font-size: 2.2vh;
+}
+
+.acceuil-menu option {
+    font-size: 2.2vh;
+}
+
+.acceuil-menu label {
+    font-size: 3vh;
+    font-style: italic;
+}
+
+.btn-savoir-plus {
+    width: 120%;
+    position: relative;
+    top: 94%;
+    right: 40%;
+    font-size: 2.4vh;
+    cursor: pointer;
+    border-radius: 5px;
+    border: solid 3px black ;
+}
+
+.container-btn-savoir-plus {
+    width: 20%;
+}
