@@ -1,0 +1,40 @@
+nav {
+    width: 90vw;
+    height: 15vh;
+    border: solid 2px black;
+    border-radius: 10px;
+}
+
+nav input {
+    border-radius: 5px;
+    width: 22vw;
+    height: 5vh;
+    padding: 0% 4% 0% 4%;
+    font-size: large;
+}
+
+nav form button {
+    border-radius: 5px;
+    padding: 0% 5% 0% 5%;
+    cursor: pointer;
+}
+
+.logo {
+    height: 90%;
+    position: relative;
+    right: 26vw;
+    cursor: pointer;
+}
+
+.icone-utilasteur {
+    height: 50%;
+    position: relative;
+    left: 18vw; 
+    cursor: pointer;
+}
+
+.icone-utilasteur:hover {
+    transition: 0.2s;
+    scale: 1.2;
+}
+
