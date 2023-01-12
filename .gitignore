@@ -1,2 +1,2 @@
 back_end/vendor
-.gitignore
+back_end/.env
