@@ -3,6 +3,10 @@ body {
     padding: 0%;
 }
 
+a {
+    text-decoration: none;
+}
+
 .flex {
     display: flex;
 }
@@ -13,6 +17,30 @@ body {
 
 .items-center {
     align-items: center;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.cl-aqua {
+    color: aqua;
+}
+
+.cl-aquamarine {
+    color: aquamarine;
+}
+
+.cl-blue {
+    color: blue;
+}
+
+.mg-top-0 {
+    margin-top: 0%;
 }
 
 .mg-top-1 {
@@ -37,6 +65,34 @@ body {
 
 .mg-top-10 {
     margin-top: 10%;
+}
+
+.mg-bottom-0 {
+    margin-bottom: 0%;
+}
+
+.mg-bottom-1 {
+    margin-bottom: 1%;
+}
+
+.mg-bottom-2 {
+    margin-bottom: 2%;
+}
+
+.mg-bottom-4 {
+    margin-bottom: 4%;
+}
+
+.mg-bottom-6 {
+    margin-bottom: 6%;
+}
+
+.mg-bottom-8 {
+    margin-bottom: 8%;
+}
+
+.mg-bottom-10 {
+    margin-bottom: 10%;
 }
 
 .mg-right-2 {
@@ -77,10 +133,6 @@ body {
 
 .mg-left-10 {
     margin-left: 10%;
-}
-
-.mg-top-2 {
-    margin-top: 2%;
 }
 
 .pd-right-2 {
@@ -169,4 +221,16 @@ body {
 
 .bottom-0 {
     bottom: 0%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
 }

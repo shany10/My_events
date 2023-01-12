@@ -1,20 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Navbar from '../component/navebar';
+import Pagination from '../component/pagination';
 
 const Acceuil = () => {
+    const [events, setEvents] = useState([])
+    const [start, setStart] = useState(0)
+    // const numberPage = Math.ceil(10000 /20)
 
-    const [agendas, setAgendas] = useState([])
+    const starteur = (index) => {
+        if(index < 0) {
+            index = 0
+        }
+        setStart(index)
+    }
 
     useEffect(() => {
         async function getAgendaData() {
-            await axios.get("https://api.openagenda.com/v2/agendas?key=79530381399144e2982925f542885ed0&size=20")
+            await axios.get("https://public.opendatasoft.com/api/records/1.0/search/?dataset=evenements-publics-openagenda&q=&rows=20&start=" + start)
                 .then((response) => {
-                    setAgendas(response.data.agendas)
+                    setEvents(response.data.records)
+                    // console.log(response.data)
+
                 })
         }
         getAgendaData()
-    }, [])
+    }, [start])
 
     return (
         <section className='acceuil'>
@@ -37,20 +48,30 @@ const Acceuil = () => {
                     </div>
                 </form>
                 <ul className='mg-top-2 pd-right-2 relative left-10'>
-                    {agendas.map((agenda, index) => {
+                    <div className='mg-top-2'>
+                        <Pagination starteur={starteur} start={start}/>
+                    </div>
+                    {events.map((event, index) => {
                         return <li key={index} className='flex center'>
-                            <img src={agenda.image} alt="agenda" />
+                            <img src={event.fields.thumbnail} alt="agenda" />
                             <div className='agenda-info'>
                                 <h1>
-                                    {agenda.title}
+                                    {event.fields.title_fr}
                                 </h1>
-                                <p>{agenda.description}</p>
+                                <p>{event.fields.description_fr}</p>
                             </div>
                             <div className='container-btn-savoir-plus'>
-                                <button className='relative bottom-0 btn-savoir-plus'>en savoir +</button>
+                                <button className='relative bottom-0 btn-savoir-plus'>
+                                    <a href={"/event/" + event.fields.uid} className='cl-blue'>
+                                        en savoir +
+                                    </a>
+                                </button>
                             </div>
                         </li>
                     })}
+                    <div className="mg-bottom-2">
+                        {/* <Pagination starteur={starteur} /> */}
+                    </div>
                 </ul>
             </div>
         </section>

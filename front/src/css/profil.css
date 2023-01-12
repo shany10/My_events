@@ -1,0 +1,19 @@
+.container-profil {
+    border: solid 2px black;
+    margin: 4%;
+    width: 90%;
+}
+
+.photo-profil {
+    width: 20%;
+    max-width: 300px;
+    border-radius: 50%;
+}
+
+.container-profil span {
+    font-size: 1.8vw;
+}
+
+.profil-presentation {
+    max-width: 50%;
+}
