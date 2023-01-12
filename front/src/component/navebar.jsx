@@ -6,12 +6,17 @@ const Navbar = () => {
     return (
         <header className='flex center mg-top-1'>
             <nav className='flex center items-center'>
-                <img src={logo} alt="logo" className='logo mg-left-10'/>
+                <a href="/" className='container-logo'>
+                    <img src={logo} alt="logo" className='logo mg-left-10' />
+                </a>
                 <form action="" className='flex center'>
-                    <input type="text" placeholder='search' className='mg-right-2'/>
+                    <input type="text" placeholder='search' className='mg-right-2' />
                     <button>Search</button>
                 </form>
-                <img src={utilisateur} alt="utilisateur icone" className='icone-utilasteur'/>
+                <a href="/profil" className='container-icone-profil'>
+                    <img src={utilisateur} alt="utilisateur icone" className='icone-utilasteur' />
+                    <p className='mg-top-0 mg-bottom-0 txt-center mg'>profil</p>
+                </a>
             </nav>
         </header>
     )

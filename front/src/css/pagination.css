@@ -1,0 +1,18 @@
+.pagination {
+    background-color: blue;
+    border: solid black 2px;
+    font-size: 1.5vw;
+    padding: 0% 2% 0% 2%;
+}
+
+.pagination:hover {
+    transform: translate(10%, 5%);
+}
+
+.container-pagination img {
+   width: 2vw;
+}
+
+.container-pagination img:active {
+    scale: 1.5;
+}
