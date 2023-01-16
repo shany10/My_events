@@ -28,7 +28,6 @@ nav form button {
     width: 8%;
     height: 100%;
     position: relative;
-    /* right: 22vw; */
     margin-right: 20%;
     cursor: pointer;
 }
@@ -37,17 +36,16 @@ nav form button {
     width: 5%;
     height: 70%;
     position: relative;
-    /* left: 22vw; */
     margin-left: 22%;
-    bottom: 10%;
 }
 
 .icone-utilasteur {
     width: 90%;
-    height: 90%;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
     display: block;
+    border-radius: 50%;
 }
 
 .icone-utilasteur:hover {

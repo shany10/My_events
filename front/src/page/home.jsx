@@ -3,7 +3,7 @@ import axios from 'axios';
 import Navbar from '../component/navebar';
 import Pagination from '../component/pagination';
 
-const Acceuil = () => {
+const Home = () => {
     const [events, setEvents] = useState([])
     const [start, setStart] = useState(0)
     // const numberPage = Math.ceil(10000 /20)
@@ -78,4 +78,4 @@ const Acceuil = () => {
     )
 }
 
-export default Acceuil;
+export default Home;
