@@ -52,11 +52,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 50, nullable: true)]
     private ?string $avatar = null;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
-    protected ?\DateTimeInterface $register_date = null;
-
     #[ORM\OneToMany(mappedBy: 'organisateur', targetEntity: Sortie::class)]
     private Collection $sorties;
+
+    #[ORM\Column(length: 255)]
+    private ?string $username = null;
 
     public function __construct()
     {
@@ -157,18 +157,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getRegisterDate(): ?\DateTimeInterface
-    {
-        return $this->register_date;
-    }
-
-    public function setRegisterDate(\DateTimeInterface $register_date): self
-    {
-        $this->register_date = $register_date;
-
-        return $this;
-    }
-
     /**
      * @return Collection<int, Sortie>
      */
@@ -195,6 +183,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
                 $sorty->setOrganisateur(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getUsername(): ?string
+    {
+        return $this->username;
+    }
+
+    public function setUsername(string $username): self
+    {
+        $this->username = $username;
 
         return $this;
     }
