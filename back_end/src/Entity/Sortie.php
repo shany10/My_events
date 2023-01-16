@@ -7,6 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use App\Entity\User;
 
 use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\Get;
@@ -48,10 +49,10 @@ class Sortie
     #[ORM\JoinColumn(nullable: false)]
     private ?user $organisateur = null;
 
-    #[ORM\OneToMany(mappedBy: 'sortie_id', targetEntity: Participants::class)]
+    #[ORM\OneToMany(mappedBy: 'sortie', targetEntity: Participants::class, orphanRemoval: true)]
     private Collection $participants;
 
-    #[ORM\OneToMany(mappedBy: 'sortie_id', targetEntity: Message::class)]
+    #[ORM\OneToMany(mappedBy: 'sortie', targetEntity: Message::class, orphanRemoval: true)]
     private Collection $messages;
 
     public function __construct()

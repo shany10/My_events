@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use App\Repository\ParticipantsRepository;
 use Doctrine\ORM\Mapping as ORM;
+use App\Entity\User;
+use App\Entity\Sortie;
 
 use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\Get;
@@ -31,37 +33,37 @@ class Participants
 
     #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: false)]
-    private ?user $user_id = null;
+    private ?user $user = null;
 
     #[ORM\ManyToOne(inversedBy: 'participants')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?sortie $sortie_id = null;
+    private ?sortie $sortie = null;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getUserId(): ?user
+    public function getUser(): ?user
     {
-        return $this->user_id;
+        return $this->user;
     }
 
-    public function setUserId(?user $user_id): self
+    public function setUser(?user $user): self
     {
-        $this->user_id = $user_id;
+        $this->user = $user;
 
         return $this;
     }
 
-    public function getSortieId(): ?sortie
+    public function getSortie(): ?sortie
     {
-        return $this->sortie_id;
+        return $this->sortie;
     }
 
-    public function setSortieId(?sortie $sortie_id): self
+    public function setSortie(?sortie $sortie): self
     {
-        $this->sortie_id = $sortie_id;
+        $this->sortie = $sortie;
 
         return $this;
     }

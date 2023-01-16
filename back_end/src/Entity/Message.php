@@ -5,6 +5,8 @@ namespace App\Entity;
 use App\Repository\MessageRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use App\Entity\User;
+use App\Entity\Sortie;
 
 use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\Get;
@@ -42,7 +44,7 @@ class Message
 
     #[ORM\ManyToOne(inversedBy: 'messages')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?sortie $sortie_id = null;
+    private ?sortie $sortie = null;
 
     public function getId(): ?int
     {
@@ -87,12 +89,12 @@ class Message
 
     public function getSortieId(): ?sortie
     {
-        return $this->sortie_id;
+        return $this->sortie;
     }
 
-    public function setSortieId(?sortie $sortie_id): self
+    public function setSortieId(?sortie $sortie): self
     {
-        $this->sortie_id = $sortie_id;
+        $this->sortie = $sortie;
 
         return $this;
     }
