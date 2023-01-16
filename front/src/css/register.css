@@ -1,0 +1,14 @@
+.register-container-input {
+    width: 50vw;
+    border: solid black 3px;
+    margin: 4% 25% 0% 25%;
+}
+
+.register-title {
+    border: solid black 3px;
+    padding: 1% 2% 1% 2%;
+}
+
+.register-label-container {
+    width: 10vw;
+}

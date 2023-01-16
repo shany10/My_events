@@ -1,7 +1,8 @@
 .container-profil {
-    border: solid 2px black;
+    border: solid 3px black;
     margin: 4%;
     width: 90%;
+    padding-bottom: 2%;
 }
 
 .photo-profil {
@@ -10,10 +11,29 @@
     border-radius: 50%;
 }
 
-.container-profil span {
-    font-size: 1.8vw;
-}
-
 .profil-presentation {
     max-width: 50%;
+}
+
+.sortie {
+    width: 70%;
+    border: solid black 2px;
+    margin: 2% 15% 0% 15%;
+}
+
+.img-sortie {
+    width: 12%;
+}
+
+.profil-sortie-container-info {
+    width: 55%;
+}
+
+.profil-sorti-container-btn {
+    width: 28%;
+}
+
+.profil-sorti-container-btn button {
+    width: 60%;
+    height: 30%;
 }
