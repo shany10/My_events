@@ -1,15 +1,32 @@
 .register-container-input {
     width: 50vw;
-    border: solid black 3px;
+    border: solid rgb(172, 71, 24) 3px;
     margin: 4% 25% 0% 25%;
+    background-color: rgba(22, 0, 0, 0.8);
+    color: white;
+    border-radius: 15px;
+}
+
+.register-container-input input{
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+}
+
+.register-container-input button{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 0, 0);
+    border-radius: 10px;
 }
 
 .register-title {
     border: solid black 3px;
     padding: 1% 2% 1% 2%;
+    color: rgb(255, 123, 0);
 }
 
 .register-label-container {
     width: 10vw;
 }
+
 

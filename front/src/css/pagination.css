@@ -1,8 +1,9 @@
 .pagination {
-    background-color: blue;
+    background-color: rgb(212, 9, 9);
     border: solid black 2px;
     font-size: 1.5vw;
     padding: 0% 2% 0% 2%;
+    border-radius: 5px;
 }
 
 .pagination:hover {

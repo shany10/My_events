@@ -4,6 +4,7 @@
     margin-bottom: 4vh;
     border: solid black 2px;
     width: 40vw;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .agenda-info {
@@ -13,15 +14,19 @@
 }
 
 .acceuil ul {
-    border: solid rgb(167, 0, 0) 2px;
+    border: solid rgb(204, 6, 6) 4px;
+    background-color: transparent;
+    color: white;
+    letter-spacing: 1px;
+    background-color: rgba(80, 9, 9, 0.8);
 }
 
 .acceuil li img {
     margin-top: 2vh;
-    margin-bottom: 1vh;
+    margin-bottom: 2vh;
     margin-left: 4%;
-    width: 30%;
-    height: 30%;
+    width: 50%;
+    height: 50%;
     min-width: 30%;
     min-height: 30%;
 }
@@ -29,7 +34,9 @@
 .acceuil-menu {
     width: 20vw;
     height: 65vh;
-    border: solid blue 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    color: white;
 }
 
 .acceuil-menu input {
@@ -42,7 +49,7 @@
 
 .acceuil-menu select {
     height: 4vh;
-    width: 85%; 
+    width: 85%;
     border: solid 2px aqua;
     border-radius: 5px;
     font-size: 2.2vh;
@@ -62,10 +69,12 @@
     position: relative;
     top: 94%;
     right: 40%;
-    font-size: 2.4vh;
+    font-size: 2.6vh;
     cursor: pointer;
     border-radius: 5px;
-    border: solid 3px black ;
+    background-color: rgb(255, 0, 0);
+    padding: 5% 5% 5% 5%;
+    border: none;
 }
 
 .container-btn-savoir-plus {

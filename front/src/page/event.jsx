@@ -4,6 +4,7 @@ import Navbar from '../component/navebar';
 import calander from '../img/icons8-calander-64.png';
 import lieux from '../img/icons8-épingle-2-50.png';
 import telephone from '../img/icons8-téléphone-60.png';
+import no_image from '../img/No_Image_Available.jpg'
 import { useParams } from 'react-router-dom';
 
 const Event = () => {
@@ -32,10 +33,16 @@ const Event = () => {
                 else {
                     description = event.fields.description_fr
                 }
+
+
                 return <div key={index} className='container-event'>
                     <h1 className='mg-top-1'>{event.fields.title_fr}</h1>
                     <div className='flex'>
-                        <img src={event.fields.image} alt="event" className='event-image mg-left-2' />
+                        {event.fields.image === undefined ? (
+                            <img src={no_image} alt="event" className='event-image mg-left-2' />
+                        ) : (
+                            <img src={event.fields.image} alt="event" className='event-image mg-left-2' />
+                        )}
                         <form className='mg-left-2'>
                             <h2 className='bold underline mg-top-0 mg-bottom-0'>{event.fields.daterange_fr}</h2>
                             <div className='flex items-center mg-top-2'>
@@ -44,8 +51,9 @@ const Event = () => {
                                 <img src={calander} alt="calander" className='icone-calander mg-left-2' />
                             </div>
                             <div className="flex mg-top-2">
-                                <span className='bold'>Lieux :</span><span>{event.fields.location_address}</span>
+                                <span className='bold'>Lieux :</span><span className='flex'>{event.fields.location_address}
                                 <img src={lieux} alt="icone-lieux" className='icone-lieux mg-left-2' />
+                                </span>
                             </div>
                             {event.fields.location_access_fr === undefined ? null : (
                                 <div className="flex mg-top-4">
@@ -60,7 +68,7 @@ const Event = () => {
                         </form>
                     </div>
                     <h2 className='mg-left-2 bold underline'>Description</h2>
-                    <p className='mg-left-2 mg-top-0'>{description}</p>
+                    <p className='mg-left-2 mg-top-0 event-container-description'>{description}</p>
                 </div>
             })}
         </section>

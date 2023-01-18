@@ -1,6 +1,6 @@
 .container-profil {
     border: solid 3px black;
-    margin: 4%;
+    margin: 2% 5% 2% 5%;
     width: 90%;
     padding-bottom: 2%;
 }
@@ -13,6 +13,10 @@
 
 .profil-presentation {
     max-width: 50%;
+    letter-spacing: 1px;
+    background-color: rgba(143, 143, 143, 0.5);
+    padding: 1% 1% 1% 1%;
+    margin: 1%;
 }
 
 .sortie {

@@ -1,6 +1,12 @@
 body {
     margin: 0%;
     padding: 0%;
+    background-image:url('../img/Paysage-fantasy.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    /* -webkit-backdrop-filter: blur(15px); */
+    backdrop-filter: blur(2px);
+    min-height: 100vh;
 }
 
 a {
@@ -17,6 +23,10 @@ a {
 
 .items-center {
     align-items: center;
+}
+
+.content-right {
+    justify-content: right;
 }
 
 .txt-center {
@@ -37,6 +47,22 @@ a {
 
 .cl-blue {
     color: blue;
+}
+
+.cl-black {
+    color: black;
+}
+
+.cl-white {
+    color: white;
+}
+
+.cl-brown {
+    color: brown;
+}
+
+.cl-red {
+    color: rgb(255, 62, 62);
 }
 
 .mg-top-0 {
