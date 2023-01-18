@@ -16,7 +16,7 @@ const Profil = () => {
                         <br />
                         <br />
                         <span className='bold italic underline fts-1-8'>Présentation</span>
-                        <p className='profil-presentation'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quae quod id assumenda nesciunt nobis laudantium, quibusdam expedita, vel deserunt dolore facere quos sit accusamus molestias quo ipsa magnam. Veniam.</p>
+                        <p className='profil-presentation fts-1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quae quod id assumenda nesciunt nobis laudantium, quibusdam expedita, vel deserunt dolore facere quos sit accusamus molestias quo ipsa magnam. Veniam.</p>
                     </div>
                 </div>
                 <div className='mg-top-4'>

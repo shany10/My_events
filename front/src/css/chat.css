@@ -1,0 +1,59 @@
+.container-chat {
+    width: 90vw;
+    border: solid black 3px;
+    margin: 1% 5% 0% 5%;
+    background-color: rgba(26, 26, 26, 0.7);
+    color: aliceblue;
+}
+
+.chat-map {
+    width: 96%;
+    height: 14vh;
+    border: solid black 2px;
+    margin: 0% 2% 0% 2%;
+}
+
+.chat-container-participant {
+    width: 30%;
+}
+
+.chat-container-participant img {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+}
+
+.chat-container-message {
+    width: 66.4%;
+    border-left: solid rgb(216, 41, 41) 4px;
+    border-right: solid rgb(216, 41, 41) 4px;
+    overflow: auto;
+    height: 48vh;
+}
+
+.box-participant {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 90%;
+}
+
+.participant-border {
+    border: solid rgb(99, 97, 97) 2px;
+    border-radius: 20px;
+}
+
+.chat-profil {
+    width: 6%;
+    height: 6%;
+    border-radius: 50%;
+}
+
+.box-message {
+    max-width: 100%;
+    border: solid 2px black;
+    border-radius: 10px;
+    padding: 1% 2% 1% 2%;
+}
+
+.chat-box {
+    width: 60%;
+}

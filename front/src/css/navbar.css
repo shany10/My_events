@@ -3,6 +3,8 @@ nav {
     height: 15vh;
     border: solid 2px black;
     border-radius: 10px;
+    /* background-color: rgba(80, 9, 9, 0.8); */
+    color: rgb(1, 46, 21);
 }
 
 nav input {
@@ -17,6 +19,8 @@ nav form button {
     padding: 0% 5% 0% 5%;
     cursor: pointer;
     font-size: 1vw;
+    background-color: black;
+    color: red;
 }
 
 .logo {

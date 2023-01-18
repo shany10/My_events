@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Navbar from '../component/navebar';
 import Pagination from '../component/pagination';
+import no_image from '../img/No_Image_Available.jpg';
 
 const Home = () => {
     const [events, setEvents] = useState([])
@@ -9,7 +10,7 @@ const Home = () => {
     // const numberPage = Math.ceil(10000 /20)
 
     const starteur = (index) => {
-        if(index < 0) {
+        if (index < 0) {
             index = 0
         }
         setStart(index)
@@ -20,8 +21,6 @@ const Home = () => {
             await axios.get("https://public.opendatasoft.com/api/records/1.0/search/?dataset=evenements-publics-openagenda&q=&rows=20&start=" + start)
                 .then((response) => {
                     setEvents(response.data.records)
-                    // console.log(response.data)
-
                 })
         }
         getAgendaData()
@@ -49,20 +48,25 @@ const Home = () => {
                 </form>
                 <ul className='mg-top-2 pd-right-2 relative left-10'>
                     <div className='mg-top-2'>
-                        <Pagination starteur={starteur} start={start}/>
+                        <Pagination starteur={starteur} start={start} />
                     </div>
                     {events.map((event, index) => {
                         return <li key={index} className='flex center'>
-                            <img src={event.fields.thumbnail} alt="agenda" />
+                            {event.fields.thumbnail === undefined ? (
+                                <img src={no_image} alt="agenda" />
+
+                            ) : (
+                                <img src={event.fields.thumbnail} alt="agenda" />
+                            )}
                             <div className='agenda-info'>
-                                <h1>
+                                <h1 className='underline cl-red'>
                                     {event.fields.title_fr}
                                 </h1>
-                                <p>{event.fields.description_fr}</p>
+                                <p className='fts-1-2'>{event.fields.description_fr}</p>
                             </div>
                             <div className='container-btn-savoir-plus'>
                                 <button className='relative bottom-0 btn-savoir-plus'>
-                                    <a href={"/event/" + event.fields.uid} className='cl-blue'>
+                                    <a href={"/event/" + event.fields.uid} className='cl-white'>
                                         en savoir +
                                     </a>
                                 </button>
@@ -70,7 +74,7 @@ const Home = () => {
                         </li>
                     })}
                     <div className="mg-bottom-2">
-                        {/* <Pagination starteur={starteur} /> */}
+                        <Pagination starteur={starteur} start={start} />
                     </div>
                 </ul>
             </div>

@@ -24,7 +24,7 @@ const Login = () => {
         e.preventDefault()
 
         if (user.email.match(regex) === null) {
-            setMessage({ ...message, email: "votre mail est invalide" })
+            setMessage({ ...message, email: "Mail invalide" })
             return
         }
 
@@ -51,7 +51,7 @@ const Login = () => {
             <Navbar />
             <form onSubmit={(e) => sendData(e)} action="" className='register-container-input pd-bottom-2'>
                 <div className='flex center'>
-                    <h1 className='fts-2 txt-center register-title'>LOGIN</h1>
+                    <h1 className='fts-2-5 txt-center register-title'>LOGIN</h1>
                 </div>
                 <div className='flex center mg-top-2'>
                     <div className='register-label-container'>
@@ -72,8 +72,11 @@ const Login = () => {
                         <input onChange={(e) => seteur(e)} type="password" name="password" placeholder='password...' className='fts-1-5 pd-left-2 pd-top-1 pd-bottom-1' required />
                     </div>
                 </div>
-                <div className="flex center mg-top-6">
-                    <button type='submit' className='fts-2 pd-left-1 pd-right-1 '>Login</button>
+                <div className="flex center mg-top-4">
+                    <button type='submit' className='fts-2 pd-left-2 pd-right-2 pd-top-1 pd-bottom-1 pointer'>Login</button>
+                </div>
+                <div className='flex center mg-top-2'>
+                    <a href="/register" className='fts-1-5 underline cl-red'>register</a>
                 </div>
             </form>
         </section>

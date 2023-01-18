@@ -5,7 +5,7 @@ import Cookies from 'universal-cookie';
  
 const Navbar = () => {
     const cookies = new Cookies()
-    let url_profiler = '/register'
+    let url_profiler = '/login'
     if(cookies.get('user') !== undefined) {
        url_profiler = '/profil'
     }
