@@ -6,7 +6,7 @@ const Register = () => {
 
     const [user, setUser] = useState({
         email: "",
-        pseudo: "",
+        username: "",
         password: "",
         confirm: ""
     })
@@ -54,7 +54,8 @@ const Register = () => {
         }
 
         const options = {
-            url: 'http://localhost:8000/register',
+            // url: 'http://localhost:8000/register',
+            url: 'http://127.0.0.1:8000/register',
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -63,7 +64,7 @@ const Register = () => {
             data: {
                 email: user.email,
                 password: user.password,
-                pseudo: user.pseudo
+                username: user.username
             }
         };
         axios(options)
@@ -97,10 +98,10 @@ const Register = () => {
                 </div>
                 <div className="flex center mg-top-2">
                     <div className="register-label-container">
-                        <label htmlFor="pseudo" className='fts-1-8'>pseudo :</label>
+                        <label htmlFor="username" className='fts-1-8'>username :</label>
                     </div>
                     <div>
-                        <input onChange={(e) => seteur(e)} type="text" name='pseudo' placeholder='pseudo...' className='fts-1-5 pd-left-2 pd-top-1 pd-bottom-1' required />
+                        <input onChange={(e) => seteur(e)} type="text" name='username' placeholder='username...' className='fts-1-5 pd-left-2 pd-top-1 pd-bottom-1' required />
                     </div>
                 </div>
                 <div className="flex center mg-top-2">

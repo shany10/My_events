@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Navbar from '../component/navebar';
+import Cookies from 'universal-cookie';
 
 const Login = () => {
 
@@ -42,6 +43,8 @@ const Login = () => {
         };
         axios(options)
             .then(response => {
+                const cookies = new Cookies();
+                cookies.set('token', response.data.token, { path: '/', sameSite: 'none' });
                 console.log(response.status);
             });
     }
