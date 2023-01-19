@@ -5,6 +5,7 @@ import Profil from './page/profil';
 import Register from './page/register';
 import Login from './page/login';
 import Chat from './page/chat';
+import Research from './page/research';
 import "./css/style.css";
 import "./css/navbar.css";
 import "./css/home.css";
@@ -24,6 +25,7 @@ function App() {
         <Route exact path='/register' element={<Register />}></Route>
         <Route exact path='/login' element={<Login />}></Route>
         <Route exact path='/chat' element={<Chat />}></Route>
+        <Route exact path='/search/:event' element={<Research />}></Route>
         <Route exact path='/event/:uuid' element={<Event />}></Route>
       </Routes>
     </Router>

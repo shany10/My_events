@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, {useEffect , useState} from 'react';
 import Navbar from '../component/navebar';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 import Pagination from '../component/pagination';
 import no_image from '../img/No_Image_Available.jpg';
 
-const Home = () => {
+const Research = () => {
+
+    const { event } = useParams()
+
     const [events, setEvents] = useState([])
     const [start, setStart] = useState(0)
-    // const numberPage = Math.ceil(10000 /20)
-
+    
     const starteur = (index) => {
         if (index < 0) {
             index = 0
@@ -18,13 +21,13 @@ const Home = () => {
 
     useEffect(() => {
         async function getAgendaData() {
-            await axios.get("https://public.opendatasoft.com/api/records/1.0/search/?dataset=evenements-publics-openagenda&q=&rows=20&start=" + start)
+            await axios.get("https://public.opendatasoft.com/api/records/1.0/search/?dataset=evenements-publics-openagenda&q=" + event + "&rows=20&start=" + start)
                 .then((response) => {
                     setEvents(response.data.records)
                 })
         }
         getAgendaData()
-    }, [start])
+    }, [start, event])
 
     return (
         <section className='acceuil'>
@@ -81,4 +84,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default Research

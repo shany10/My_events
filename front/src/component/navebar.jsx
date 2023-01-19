@@ -1,10 +1,12 @@
-import React from 'react';
+import React , {useState} from 'react';
 import logo from '../img/icons8-chevalier-100.png';
 import photo_profil from '../img/photo-avatar-profil.png'
 import Cookies from 'universal-cookie';
  
 const Navbar = () => {
     const cookies = new Cookies()
+    const [data , setData] = useState("");
+
     let url_profiler = '/login'
     if(cookies.get('user') !== undefined) {
        url_profiler = '/profil'
@@ -15,8 +17,8 @@ const Navbar = () => {
                 <a href="/" className='container-logo'>
                     <img src={logo} alt="logo" className='logo' />
                 </a>
-                <form action="" className='flex center'>
-                    <input type="text" placeholder='search' className='mg-right-2' />
+                <form action={"/search/" + data} className='flex center'>
+                    <input onChange={(e) => setData(e.target.value)} type="text" placeholder='search' className='mg-right-2'/>
                     <button>Search</button>
                 </form>
                 <a href={url_profiler} className='container-icone-profil'>
