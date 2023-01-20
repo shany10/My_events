@@ -31,21 +31,21 @@ const Register = () => {
         if (user.email.match(regex_email) === null) {
             setMessage(previousState => {
                 return { ...previousState, email: "Mail invalide" }
-              })
+            })
             problem = true
         }
 
         if (user.password.match(regex_password) === null) {
             setMessage(previousState => {
                 return { ...previousState, password: "Au moin 8 caractère requise" }
-              })
+            })
             problem = true
         }
 
         if (user.password !== user.confirm) {
             setMessage(previousState => {
                 return { ...previousState, confirm: "Mot de passe non identique" }
-              })
+            })
             problem = true
         }
 
@@ -71,7 +71,6 @@ const Register = () => {
             .then(response => {
                 console.log(response.status);
             });
-
     }
 
     return (
