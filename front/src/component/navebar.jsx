@@ -23,7 +23,7 @@ const Navbar = () => {
                 </form>
                 <a href={url_profiler} className='container-icone-profil'>
                     <img src={photo_profil} alt="utilisateur icone" className='icone-utilasteur' />
-                    <p className='mg-top-0 mg-bottom-0 txt-center mg'>profil</p>
+                    {/* <p className='mg-top-0 mg-bottom-0 txt-center mg'>profil</p> */}
                 </a>
             </nav>
         </header>

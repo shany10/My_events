@@ -29,10 +29,6 @@ class AuthController extends AbstractController
         $user = new User();
         $arr = [];
 
-        $username = $request->get('username');
-        $password = $request->get('password');
-        $email = $request->get('email');
-
         $hashedPassword = $passwordHasher->hashPassword(
             $user,
             $request->toArray()['password']

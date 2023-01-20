@@ -29,7 +29,7 @@ const Login = () => {
         }
 
         const options = {
-            url: 'http://localhost:8000/auth',
+            url: 'https://localhost:8000/auth',
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -42,7 +42,7 @@ const Login = () => {
         };
         axios(options)
             .then(response => {
-                console.log(response.status);
+                console.log(response.data);
             });
     }
 
